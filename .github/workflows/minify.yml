@@ -36,3 +36,13 @@ jobs:
         with:
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: ${{ github.ref }}
+      
+      - name: "Release"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            LICENSE.txt
+            *.min.js
+            *.min.css
