@@ -30,7 +30,7 @@ request.onload = function () {
     card.setAttribute('class', 'card');
 
     // Create an h1 and set the text content to the film's title
-    const h1 = document.createElement('h1');
+    const h1 = document.createElement('h2');
     h1.innerHTML = converter.makeHtml(post.text);
 
     // Create a p and set the text content to the film's description
